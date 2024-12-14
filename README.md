@@ -3,6 +3,10 @@
 ## Brief Description of Approach
 This project involves creating a responsive login and sign-up form using HTML, CSS, and JavaScript. The form is designed to be visually appealing, user-friendly, and mobile-responsive. It includes essential features such as input fields, a password toggle button (eye icon) to show/hide the password, error message handling, and buttons for login or sign-up actions.
 
+
+![{CAAE480C-ACB8-444B-AA96-585950763A2B}](https://github.com/user-attachments/assets/7644e599-e6a1-47cb-bb40-2fc0126a20aa)
+
+
 ### Features:
 1. **Responsive Design**: The layout adjusts for different screen sizes, including mobile, tablet, and desktop.
 2. **Password Visibility Toggle**: Users can click an eye icon to toggle the visibility of their password.
