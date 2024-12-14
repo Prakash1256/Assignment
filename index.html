@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="loginPage">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required>
+                <div class="error" id="loginEmailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required>
+                <div class="error" id="loginPasswordError"></div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="navigation">
+            <p>Don't have an account? <a href="#" id="toSignUp">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div class="container" id="signUpPage" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <div class="form-group">
+                <label for="signUpName">Full Name</label>
+                <input type="text" id="signUpName" required>
+                <div class="error" id="signUpNameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="signUpEmail">Email</label>
+                <input type="email" id="signUpEmail" required>
+                <div class="error" id="signUpEmailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="signUpPassword">Password</label>
+                <input type="password" id="signUpPassword" required>
+                <div class="error" id="signUpPasswordError"></div>
+            </div>
+            <div class="form-group">
+                <label for="signUpConfirmPassword">Confirm Password</label>
+                <input type="password" id="signUpConfirmPassword" required>
+                <div class="error" id="signUpConfirmPasswordError"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="navigation">
+            <p>Already have an account? <a href="#" id="toLogin">Login</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
