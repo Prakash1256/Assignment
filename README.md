@@ -35,7 +35,7 @@ This project involves creating a responsive login and sign-up form using HTML, C
 
 2. **Navigate to the project directory**:
     ```bash
-    cd login-signup-form
+    cd Assignment
     ```
 
 3. **Open the project in your browser**:
