@@ -13,6 +13,7 @@ toLogin.addEventListener('click', () => {
     signUpPage.style.display = 'none';
 });
 
+
 document.querySelectorAll('.toggle-password').forEach(button => {
     button.addEventListener('click', () => {
         const targetInput = document.getElementById(button.dataset.target);
@@ -22,6 +23,7 @@ document.querySelectorAll('.toggle-password').forEach(button => {
         button.textContent = isPassword ? '🙈' : '👁️';
     });
 });
+
 
 document.getElementById('loginForm').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -35,20 +37,34 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
     emailError.textContent = '';
     passwordError.textContent = '';
 
+    
     if (!email.value.match(/^\S+@\S+\.\S+$/)) {
         emailError.textContent = 'Please enter a valid email.';
         isValid = false;
     }
 
+    
     if (password.value.trim() === '') {
         passwordError.textContent = 'Password cannot be empty.';
         isValid = false;
     }
 
-    if (isValid) {
+    
+    if (!isValid) return;
+
+    
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(u => u.email === email.value);
+
+    if (user && user.password === password.value) {
         alert('Login successful!');
+        
+        window.location.href = '/dashboard';  
+    } else {
+        alert('Invalid email or password');
     }
 });
+
 
 document.getElementById('signUpForm').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -69,27 +85,44 @@ document.getElementById('signUpForm').addEventListener('submit', (e) => {
     passwordError.textContent = '';
     confirmPasswordError.textContent = '';
 
+    
     if (name.value.trim() === '') {
         nameError.textContent = 'Full Name cannot be empty.';
         isValid = false;
     }
 
+    
     if (!email.value.match(/^\S+@\S+\.\S+$/)) {
         emailError.textContent = 'Please enter a valid email.';
         isValid = false;
     }
+
 
     if (password.value.length < 8) {
         passwordError.textContent = 'Password must be at least 8 characters long.';
         isValid = false;
     }
 
+    
     if (confirmPassword.value !== password.value) {
         confirmPasswordError.textContent = 'Passwords do not match.';
         isValid = false;
     }
 
-    if (isValid) {
-        alert('Sign-Up successful!');
+    
+    if (!isValid) return;
+
+    
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    if (users.some(user => user.email === email.value)) {
+        alert('Email already registered!');
+        return;
     }
+
+    users.push({ name: name.value, email: email.value, password: password.value });
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('Sign-Up successful!');
+    loginPage.style.display = 'block';
+    signUpPage.style.display = 'none';
 });

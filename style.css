@@ -1,26 +1,32 @@
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
+
+html,body{
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
+    overflow: hidden; 
 }
 
-/* Container styling for both login and sign-up forms */
 .container {
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 450px;
     background: #fff;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 8px;
+    overflow-x: hidden;
+    
 }
 
-/* Heading styling */
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -28,10 +34,10 @@ h2 {
     font-weight: bold;
 }
 
-/* Form group styling */
+
 .form-group {
     margin-bottom: 15px;
-    position: relative; /* To position toggle button inside input */
+    position: relative; 
 }
 
 .form-group label {
@@ -44,35 +50,32 @@ h2 {
 .form-group input {
     width: 100%;
     padding: 10px;
-    padding-right: 40px; /* Space for toggle button */
+    padding-right: 40px; 
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-/* Toggle button styling */
+
 .toggle-password {
     position: absolute;
-    left: 180px;
-    top: 65%;
-    transform: translateY(-50%);
+    left: 200px;  
+    top: 27px;    
     background: none;
     border: none;
     font-size: 1.2em;
     cursor: pointer;
-    
     padding: 0;
     outline: none;
 }
 
-/* Error message styling */
+
 .form-group .error {
     color: red;
     font-size: 0.9em;
     margin-top: 5px;
 }
 
-/* Button styling */
 button {
     width: 100%;
     padding: 10px;
@@ -86,7 +89,6 @@ button {
 }
 
 
-/* Navigation link styling */
 .navigation {
     text-align: center;
     margin-top: 15px;
@@ -102,13 +104,54 @@ button {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
-@media (max-width: 480px) {
+
+@media (max-width: 768px) {
+    
     .container {
+        width: 100%;
         padding: 15px;
+    }
+   
+
+    .form-group input {
+        padding: 10px;
+        font-size: 1em;
     }
 
     button {
-        font-size: 0.9em;
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    
+    .toggle-password {
+        left: 200px; 
+        font-size: 1.1em;
+        margin-top: 5px;
     }
 }
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+    .toggle-password {
+        left: 138px;
+        margin-top: 5px;
+        font-size: 1em;
+    }
+}
+
