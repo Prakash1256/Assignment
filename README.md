@@ -23,7 +23,7 @@ This project involves creating a responsive login and sign-up form using HTML, C
 ### Steps to Run:
 1. **Clone the repository** (if hosted on GitHub or similar platforms):
     ```bash
-    git clone https://github.com/your-username/login-signup-form.git
+    https://github.com/Prakash1256/Assignment.git
     ```
 
 2. **Navigate to the project directory**:
