@@ -6,6 +6,9 @@ This project involves creating a responsive login and sign-up form using HTML, C
 
 ![{CAAE480C-ACB8-444B-AA96-585950763A2B}](https://github.com/user-attachments/assets/7644e599-e6a1-47cb-bb40-2fc0126a20aa)
 
+![{A2F98143-9A77-49D7-BEAA-15D4D2D1EB5E}](https://github.com/user-attachments/assets/4951bb14-ea91-48dc-a41d-d8b51a3aff98)
+
+
 
 ### Features:
 1. **Responsive Design**: The layout adjusts for different screen sizes, including mobile, tablet, and desktop.
