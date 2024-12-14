@@ -13,6 +13,16 @@ toLogin.addEventListener('click', () => {
     signUpPage.style.display = 'none';
 });
 
+document.querySelectorAll('.toggle-password').forEach(button => {
+    button.addEventListener('click', () => {
+        const targetInput = document.getElementById(button.dataset.target);
+        const isPassword = targetInput.type === 'password';
+
+        targetInput.type = isPassword ? 'text' : 'password';
+        button.textContent = isPassword ? '🙈' : '👁️';
+    });
+});
+
 document.getElementById('loginForm').addEventListener('submit', (e) => {
     e.preventDefault();
     let isValid = true;
