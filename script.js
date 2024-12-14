@@ -20,7 +20,7 @@ document.querySelectorAll('.toggle-password').forEach(button => {
         const isPassword = targetInput.type === 'password';
 
         targetInput.type = isPassword ? 'text' : 'password';
-        button.textContent = isPassword ? '🙈' : '👁️';
+        button.textContent = isPassword ? '👀' : '👁️';
     });
 });
 
